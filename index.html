@@ -1,0 +1,132 @@
+<!-- 
+  	Title:	Pure CSS Joystick SNES
+  	Motive:	Fun :)
+	Author: Christian Herber Santos
+	E-mail: christianherbersantos@gmail.com
+	Date:	06/2015
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+     <title>Pure CSS Joystick SNES</title>
+     <style>
+.bola-direcional {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: #bdbdbd;
+	position: relative;
+	z-index: 9999;
+	margin: 47px 0 0 46px;
+	box-shadow: inset 0px 0px 7px #AEACAC;
+	border: 1px solid #bdbdbd;
+}
+.gambi {
+	width: 114px;
+	height: 40px;
+	background: #5B5B5B;
+	position: absolute;
+	z-index: 999991;
+	margin: -97px 0 0 17px;
+}
+.dir-l-r{
+	width: 120px;
+	height: 40px;
+	background: #5B5B5B;
+	position: relative;
+	z-index: 99999;
+	margin: 55px auto;
+	box-shadow: -1px 1px 3px #333;
+	border: 2px solid #333;
+	border-radius: 3px;
+}
+.bola-meio-dir {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #5A5A5A;
+	margin: -90px 0 0 59px;
+	position: absolute;
+	z-index: 999999;
+	box-shadow: inset 0px 0px 10px #1F1F1F;
+}
+.dir-u-d{
+	width: 40px;
+	height: 120px;
+	background: #5B5B5B;
+	position: relative;
+	z-index: 99999;
+	margin: -137px auto;
+	box-shadow: -1px 1px 3px #333;
+	border: 2px solid #333;
+	border-radius: 3px;
+}
+
+
+.arrow-r, .arrow-l, .arrow-u, .arrow-d{
+	position: absolute;
+	margin: -89px 0 0 110px;
+	z-index: 999999;
+}
+.arrow-l {
+	margin: -89px 0 0 -1px;
+	-webkit-transform: rotate(180deg);
+}
+.arrow-u {
+	margin: -142px 0 0 56px;
+	-webkit-transform: rotate(-90deg);
+}
+.arrow-d {
+	margin: -33px 0 0 55px;
+	-webkit-transform: rotate(90deg);
+}
+.arrow-r:before, .arrow-l:before, .arrow-u:before, .arrow-d:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 10px; 
+	height: 0; 
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-l:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-u:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-d:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+
+     </style>
+ </head>
+ <body>
+
+<div class="bola-direcional">
+    <div class="dir-l-r"></div>
+    <div class="bola-meio-dir"></div>
+    <div class="gambi"></div>
+    <div class="arrow-r" onmousedown="Direta()" onmouseup="Parar()" ontouchstart="Frente()" ontouchend="Parar()"></div>
+    <div class="arrow-l" onmousedown="Esquerda()" onmouseup="Parar()" ontouchstart="Frente()" ontouchend="Parar()"></div>
+    <div class="arrow-u" onmousedown="Frente()" onmouseup="Parar()" ontouchstart="Frente()" ontouchend="Parar()"></div>
+    <div class="arrow-d" onmousedown="Tras()" onmouseup="Parar()" ontouchstart="Frente()" ontouchend="Parar()"></div>
+    <div class="dir-u-d">
+
+    </div>
+</div>
+</body>
+</html>
